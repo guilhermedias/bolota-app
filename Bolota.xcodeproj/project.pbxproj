@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7927B83D232F278A001122EB /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7927B83C232F278A001122EB /* Clock.swift */; };
+		7927B840232F30AA001122EB /* ClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7927B83F232F30AA001122EB /* ClockTests.swift */; };
 		7951741223230EF9003BED94 /* Multimap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951741123230EF9003BED94 /* Multimap.swift */; };
 		7951742323231052003BED94 /* MultimapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951742223231052003BED94 /* MultimapTests.swift */; };
 		7951742623248E38003BED94 /* Observation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951742523248E38003BED94 /* Observation.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7927B83C232F278A001122EB /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		7927B83F232F30AA001122EB /* ClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockTests.swift; sourceTree = "<group>"; };
 		7951741123230EF9003BED94 /* Multimap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multimap.swift; sourceTree = "<group>"; };
 		795174172323101C003BED94 /* BolotaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BolotaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7951741B2323101C003BED94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +68,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7927B83B232F2767001122EB /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				7927B83C232F278A001122EB /* Clock.swift */,
+			);
+			path = Clock;
+			sourceTree = "<group>";
+		};
+		7927B83E232F3094001122EB /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				7927B83F232F30AA001122EB /* ClockTests.swift */,
+			);
+			path = Clock;
+			sourceTree = "<group>";
+		};
 		7951741023230EB1003BED94 /* Multimap */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				795174292324A480003BED94 /* Behavior */,
+				7927B83E232F3094001122EB /* Clock */,
 				7951742123231045003BED94 /* Multimap */,
 				7951741B2323101C003BED94 /* Info.plist */,
 			);
@@ -129,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				7951742423248E18003BED94 /* Behavior */,
+				7927B83B232F2767001122EB /* Clock */,
 				7951741023230EB1003BED94 /* Multimap */,
 				796D956723230BDD001C9DEE /* AppDelegate.swift */,
 				796D956923230BDD001C9DEE /* ViewController.swift */,
@@ -241,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7927B840232F30AA001122EB /* ClockTests.swift in Sources */,
 				7951742B2324A9E3003BED94 /* ObservationTests.swift in Sources */,
 				7951742323231052003BED94 /* MultimapTests.swift in Sources */,
 			);
@@ -253,6 +276,7 @@
 				796D956A23230BDD001C9DEE /* ViewController.swift in Sources */,
 				7951742823248E62003BED94 /* Behavior.swift in Sources */,
 				7951741223230EF9003BED94 /* Multimap.swift in Sources */,
+				7927B83D232F278A001122EB /* Clock.swift in Sources */,
 				796D956823230BDD001C9DEE /* AppDelegate.swift in Sources */,
 				7951742623248E38003BED94 /* Observation.swift in Sources */,
 			);
