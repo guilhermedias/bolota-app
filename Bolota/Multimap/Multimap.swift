@@ -1,6 +1,6 @@
 import Foundation
 
-class Multimap<KeyType: Hashable, ValueType> {
+class Multimap<KeyType: Hashable & Comparable & Encodable, ValueType: Encodable> {
     private var dictionary: Dictionary<KeyType, [ValueType]>
 
     init() {
@@ -31,5 +31,28 @@ class Multimap<KeyType: Hashable, ValueType> {
         } else {
             return []
         }
+    }
+}
+
+extension Multimap: Sequence {
+    func makeIterator() -> AnyIterator<(KeyType, [ValueType])> {
+        var iterator = dictionary.keys
+            .sorted()
+            .makeIterator()
+
+        return AnyIterator {
+            if let key = iterator.next() {
+                return (key, self.dictionary[key]!)
+            }
+
+            return nil
+        }
+    }
+}
+
+extension Multimap: Encodable {
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        try container.encode(dictionary)
     }
 }

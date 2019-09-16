@@ -11,6 +11,7 @@
 		7951742323231052003BED94 /* MultimapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951742223231052003BED94 /* MultimapTests.swift */; };
 		7951742623248E38003BED94 /* Observation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951742523248E38003BED94 /* Observation.swift */; };
 		7951742823248E62003BED94 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951742723248E62003BED94 /* Behavior.swift */; };
+		7951742B2324A9E3003BED94 /* ObservationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7951742A2324A9E2003BED94 /* ObservationTests.swift */; };
 		796D956823230BDD001C9DEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D956723230BDD001C9DEE /* AppDelegate.swift */; };
 		796D956A23230BDD001C9DEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D956923230BDD001C9DEE /* ViewController.swift */; };
 		796D956D23230BDD001C9DEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796D956B23230BDD001C9DEE /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		7951742223231052003BED94 /* MultimapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultimapTests.swift; sourceTree = "<group>"; };
 		7951742523248E38003BED94 /* Observation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observation.swift; sourceTree = "<group>"; };
 		7951742723248E62003BED94 /* Behavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Behavior.swift; sourceTree = "<group>"; };
+		7951742A2324A9E2003BED94 /* ObservationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationTests.swift; sourceTree = "<group>"; };
 		796D956423230BDD001C9DEE /* Bolota.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bolota.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		796D956723230BDD001C9DEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		796D956923230BDD001C9DEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		795174182323101C003BED94 /* BolotaTests */ = {
 			isa = PBXGroup;
 			children = (
+				795174292324A480003BED94 /* Behavior */,
 				7951742123231045003BED94 /* Multimap */,
 				7951741B2323101C003BED94 /* Info.plist */,
 			);
@@ -92,6 +95,14 @@
 			children = (
 				7951742723248E62003BED94 /* Behavior.swift */,
 				7951742523248E38003BED94 /* Observation.swift */,
+			);
+			path = Behavior;
+			sourceTree = "<group>";
+		};
+		795174292324A480003BED94 /* Behavior */ = {
+			isa = PBXGroup;
+			children = (
+				7951742A2324A9E2003BED94 /* ObservationTests.swift */,
 			);
 			path = Behavior;
 			sourceTree = "<group>";
@@ -230,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7951742B2324A9E3003BED94 /* ObservationTests.swift in Sources */,
 				7951742323231052003BED94 /* MultimapTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
