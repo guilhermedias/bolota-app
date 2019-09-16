@@ -10,13 +10,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        disableSaveBehaviorsButton()
     }
 
     @IBAction func startStopClock(_ sender: Any) {
         if(clock.isRunning()) {
             clock.stop()
-
             startStopButton.setTitle("Start", for: .normal)
+            enableSaveBehaviorsButton()
         } else {
             observation = Observation()
 
@@ -25,6 +26,7 @@ class ViewController: UIViewController {
             }
 
             startStopButton.setTitle("Stop", for: .normal)
+            disableSaveBehaviorsButton()
         }
     }
 
@@ -42,10 +44,25 @@ class ViewController: UIViewController {
         let data = try? encoder.encode(observation)
 
         if let data = data, let jsonString = String(data: data, encoding: .utf8) {
-            let activity = UIActivityViewController(activityItems: [jsonString], applicationActivities: nil)
-            present(activity, animated: true, completion: nil)
+            presentActivity(withData: jsonString)
         } else {
             print("Error saving the file")
         }
+    }
+
+    private func enableSaveBehaviorsButton() {
+        saveBehaviorsButton.isEnabled = true
+        saveBehaviorsButton.alpha = 1.0
+    }
+
+    private func disableSaveBehaviorsButton() {
+        saveBehaviorsButton.isEnabled = false
+        saveBehaviorsButton.alpha = 0.5
+    }
+
+    private func presentActivity(withData jsonString: String) {
+        let activity = UIActivityViewController(activityItems: [jsonString], applicationActivities: nil)
+        activity.setValue("Bolota App", forKey: "Subject")
+        present(activity, animated: true, completion: nil)
     }
 }
